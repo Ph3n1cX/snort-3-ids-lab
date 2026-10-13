@@ -1,8 +1,8 @@
 # Snort 3 Network Intrusion Detection Lab
 
-A hands-on learning project documenting how I build and explore a network intrusion detection lab with Snort 3, Kali Linux, VirtualBox, and Metasploitable 2.
+A hands-on project documenting my Snort 3 network intrusion detection lab with Kali Linux, VirtualBox, and Metasploitable 2.
 
-> **Project status:** Lab documentation in progress. I will add screenshots, exact commands, and observed alerts as I validate each step. This repository distinguishes planned checks from results actually observed.
+> **Project status:** The lab is working, and I have captured traffic and/or generated Snort alerts during practice. Exact commands, rule details, alert text, and screenshots still need to be added from the original lab output; they are not guessed in this repository.
 
 ## Objectives
 
@@ -16,21 +16,24 @@ A hands-on learning project documenting how I build and explore a network intrus
 
 | Component | Role |
 | --- | --- |
-| VirtualBox | Runs the isolated virtual lab |
+| VirtualBox | Runs the virtual lab |
 | Kali Linux (sensor VM) | Runs Snort 3 and inspects network traffic |
 | Kali Linux (test VM) | Generates controlled test traffic |
 | Metasploitable 2 | Intentionally vulnerable target for authorized lab practice |
-| Virtual network | NAT-based lab network; previously used subnet: `10.0.2.0/24` |
+| Virtual network | NAT-based setup; the lab has previously used `10.0.2.0/24`. Verify the current addresses and mode before testing. |
 
-**Important:** VirtualBox network modes and IP addresses can vary by host configuration. Confirm the actual interface, addressing, and routing in your own VM before using commands. Keep vulnerable targets isolated and do not run tests against systems you do not own or have explicit permission to assess.
+**Safety note:** VirtualBox networking varies by configuration. Verify the actual interface, IP addresses, and routing in your own VMs. Keep vulnerable targets isolated and only test systems you own or have explicit permission to assess.
 
-## Concepts Covered
+## Verified Progress
 
-- Packet inspection and network visibility
-- Snort 3 configuration and rule syntax
-- Alert output and basic interpretation
-- Test traffic versus evidence of a detection
-- False positives, limitations, and safe lab practices
+- [x] Lab is currently working (confirmed by me).
+- [x] Traffic capture and/or alert-generation practice has been performed (confirmed by me).
+- [ ] Record the exact Snort version, command, and configuration validation output.
+- [ ] Add a sanitized excerpt or screenshot of the actual traffic/alert output.
+- [ ] Document the rule or test that produced the observed output.
+- [ ] Explain the alert's significance, limitations, and defensive next steps.
+
+The first two items reflect my current lab progress. The remaining items require the original command output and evidence so the write-up can be technically specific.
 
 ## Workflow
 
@@ -43,17 +46,13 @@ A hands-on learning project documenting how I build and explore a network intrus
 
 ## Evidence and Findings
 
-This section will be updated after each test is performed.
-
-| Test | Status | Evidence / notes |
+| Item | Status | Next evidence to add |
 | --- | --- | --- |
-| Record VM addresses and network mode | To document | Add interface and IP details |
-| Validate Snort 3 configuration | To document | Add command and validation output |
-| Confirm sensor traffic visibility | To document | Add packet-capture or Snort output |
-| Trigger a controlled detection | To document | Add the rule, test method, and actual alert |
-| Review alert and explain significance | To document | Add analysis and limitations |
-
-No detection result is claimed here until it has been observed and recorded.
+| Lab environment | Lab working | VM addresses, interfaces, and network mode |
+| Traffic capture / alert practice | Performed; exact details not yet documented | Sanitized command output or screenshot |
+| Snort configuration validation | Needs documentation | Exact command and output |
+| Detection rule and test | Needs documentation | Rule text, test method, and observed alert |
+| Analyst interpretation | Needs documentation | Context, benign explanations, limitations, and response recommendation |
 
 ## Repository Structure
 
@@ -68,17 +67,13 @@ snort-3-ids-lab/
     └── README.md
 ```
 
-## What I Learned
+## Analyst Takeaway
 
-I will add concise notes here as the lab progresses, including configuration issues, network visibility challenges, rule behaviour, and how I validated the results.
-
-## Defensive Takeaways
-
-Snort alerts are investigative leads, not automatic proof of compromise. An analyst should validate the rule match, review surrounding traffic and host context where available, consider benign explanations, and document the confidence and limitations of the conclusion.
+A Snort alert is an investigative lead, not automatic proof of compromise. Validate the rule match, inspect surrounding traffic and host context where available, consider benign explanations, and record the confidence and limitations of the conclusion.
 
 ## Safety
 
-All testing should remain inside systems and networks I own or am explicitly authorized to assess. Do not publish credentials, tokens, public IPs, personal data, or other sensitive information in screenshots or logs.
+Keep testing inside systems and networks you own or are explicitly authorized to assess. Sanitize screenshots and logs before publishing; never commit credentials, tokens, personal data, or sensitive network details.
 
 ## Author
 
