@@ -1,6 +1,13 @@
 # Snort 3 Lab Notes
 
-Use this file as a dated notebook. Replace prompts with observations from your own lab; do not fill in expected results as if they were observed.
+Use this as a dated notebook. Record only what you actually observed. Do not replace expected results with imagined results.
+
+## Confirmed progress checkpoint
+
+- Lab status: working.
+- Practice performed: traffic capture and/or alert-generation activity.
+- Details still to recover from the lab: Snort version, exact commands, rule/test used, alert text, and screenshot or saved output.
+- This checkpoint is based on my own confirmation; it is not a substitute for raw technical evidence.
 
 ## Session 1 — Environment inventory
 
@@ -38,6 +45,7 @@ Record the exact commands you ran and a short, sanitized excerpt of the output.
 - Test traffic generated:
 - How visibility was checked:
 - What was observed:
+- Evidence filename:
 - What this observation does not prove:
 
 ## Session 4 — Detection test
@@ -46,7 +54,7 @@ Record the exact commands you ran and a short, sanitized excerpt of the output.
 - Rule used and purpose:
 - Test method:
 - Expected behaviour:
-- Actual observed result:
+- Actual observed result (paste exact sanitized output where possible):
 - Evidence filename:
 - Possible benign explanations:
 - Analyst conclusion and confidence:
